@@ -35,7 +35,8 @@ public class Run {
 		
 		C_ArraySort ca=new C_ArraySort();
 		//ca.testSwapLogic();
-		ca.testArraySort1();
+		//ca.testArraySort1();
+		ca.testArraySort2();
 	}
 
 }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class C_ArraySort {
 	
-	public void testSwapLogic() {
+	public static void testSwapLogic() {
 	
 		int num1=10;
 		int num2=20;
@@ -31,9 +31,11 @@ public class C_ArraySort {
 			temp2=arr[i];
 			arr[i]=arr[i+1];
 			arr[i+1]=temp2;
-		}
-		for(int i=0;i<arr.length;i++) {
-			System.out.print(arr[i]);
+
+			for(int j=0;j<arr.length;j++) {
+				System.out.print(arr[j]);
+			}
+			System.out.println();
 		}
 	}
 	
@@ -63,5 +65,35 @@ public class C_ArraySort {
 			System.out.print(array[i]+" ");
 		}
 		System.out.println();
+	}
+	
+	public static void testArraySort2() {
+		
+		int[] array= {2,4,6,1,3,5};
+		// 버블 정렬(bubble sort)
+		int temp=0;
+		
+		for(int i=array.length-1;i>-1;i--) {
+			for(int j=0;j<i;j++) {
+				if(array[j]>array[j+1]) {
+					temp=array[j];
+					array[j]=array[j+1];
+					array[j+1]=temp;
+				}
+				
+				for(int k=0;k<array.length;k++) {
+					if(k<array.length-1) {
+						System.out.print(array[k]+",");
+					}else {
+						System.out.println(array[k]);
+					}
+				}
+			}
+		}
+		System.out.println("정렬 후 확인:");
+		
+		for(int i=0;i<array.length;i++) {
+			System.out.print(array[i]+" ");
+		}
 	}
 }
