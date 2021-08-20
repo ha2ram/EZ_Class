@@ -490,6 +490,43 @@ public class ArrayPractice {
 	public void practice16() {
 
 		Scanner sc = new Scanner(System.in);
+		System.out.print("배열의 크기를 입력하세요: ");
+		String[] strArr = new String[sc.nextInt()];
+		sc.nextLine();
+
+		for (int i = 0; i < strArr.length; i++) {
+			System.out.print(i + 1 + "번째 문자열: ");
+			strArr[i] = sc.nextLine();
+		}
+		String user = null;
+		do {
+			System.out.print("더 값을 입력하시겠습니까?(Y/N): ");
+			user = sc.nextLine();
+
+			if (user.toUpperCase().equals("Y")) {
+				System.out.print("더 입력하고 싶은 개수: ");
+				int add = sc.nextInt();
+				String[] newArr = new String[strArr.length + add];
+				System.arraycopy(strArr, 0, newArr, 0, strArr.length);
+
+				sc.nextLine();
+
+				for (int i = strArr.length; i < newArr.length; i++) {
+					System.out.println(i + 1 + "번째 문자열: ");
+					newArr[i] = sc.nextLine();
+				}
+				strArr = newArr;
+			}
+		} while (!user.toUpperCase().equals("N"));
+
+		System.out.println(Arrays.deepToString(strArr));
+
+		sc.close();
+	}
+
+	public void practice16_2() {
+
+		Scanner sc = new Scanner(System.in);
 
 		String[] result = new String[0];
 		System.out.print("배열의 크기를 입력하세요: ");
