@@ -315,13 +315,76 @@ public class DimensionPractice {
 		}
 		sc.close();
 	}
-	
+
 	public void practice10() {
-		
-		String[][] arr = new String[6][6];
-		
-		for(int i=0;i<arr.length;i++) {
-			
+
+		Scanner sc = new Scanner(System.in);
+
+		String[][] board = new String[6][6];
+
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				board[i][j] = " ";
+			}
 		}
+		for (int i = 0; i < board.length - 1; i++) {
+			board[0][i + 1] = i + "";
+			board[i + 1][0] = i + "";
+		}
+		System.out.print("행 인덱스 입력: ");
+		int row = sc.nextInt();
+
+		System.out.print("열 인덱스 입력: ");
+		int col = sc.nextInt();
+
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				if (i == row && j == col) {
+					board[i + 1][j + 1] = "X";
+				}
+				System.out.print(board[i][j] + " ");
+			}
+			System.out.println();
+		}
+		sc.close();
+	}
+
+	public void practice11() {
+
+		Scanner sc = new Scanner(System.in);
+
+		String[][] board = new String[6][6];
+
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				board[i][j] = " ";
+			}
+		}
+		for (int i = 0; i < board.length - 1; i++) {
+			board[0][i + 1] = i + "";
+			board[i + 1][0] = i + "";
+		}
+		int row = 0;
+		int col = 0;
+
+		do {
+			System.out.print("행 인덱스 입력: ");
+			row = sc.nextInt();
+
+			System.out.print("열 인덱스 입력: ");
+			col = sc.nextInt();
+
+			for (int i = 0; i < board.length; i++) {
+				for (int j = 0; j < board[i].length; j++) {
+					if (i == row && j == col) {
+						board[i + 1][j + 1] = "X";
+					}
+					System.out.print(board[i][j] + " ");
+				}
+				System.out.println();
+			}
+		} while (row != 99);
+		System.out.println("프로그램 종료");
+		sc.close();
 	}
 }
