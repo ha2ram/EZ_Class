@@ -1,4 +1,4 @@
-package kr.co.ezen.chap03.field.part01_kindsOfVariable.model.vo;
+package kr.co.ezen.chap03_field.part01_kindsOfVariable.model.vo;
 
 public class FieldTest1 {
 	private int global; // field, global variable 필드이면서 전역 변수

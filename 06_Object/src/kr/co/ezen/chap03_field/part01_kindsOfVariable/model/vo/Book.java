@@ -1,4 +1,4 @@
-package kr.co.ezen.chap03.field.part01_kindsOfVariable.model.vo;
+package kr.co.ezen.chap03_field.part01_kindsOfVariable.model.vo;
 
 public class Book {
 
