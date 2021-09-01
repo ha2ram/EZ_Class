@@ -1,8 +1,8 @@
-package kr.co.ezen.chap01_ObjectVsObjectArray.run;
+package kr.co.ezen.chap01.part01_ObjectVsObjectArray.run;
 
 import java.util.Scanner;
 
-import kr.co.ezen.chap01_ObjectVsObjectArray.model.vo.Book;
+import kr.co.ezen.chap01.part01_ObjectVsObjectArray.model.vo.Book;
 
 public class ObjectArrayTest {
 

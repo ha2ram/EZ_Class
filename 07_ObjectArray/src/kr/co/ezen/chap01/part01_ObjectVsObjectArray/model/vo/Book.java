@@ -1,4 +1,4 @@
-package kr.co.ezen.chap01_ObjectVsObjectArray.model.vo;
+package kr.co.ezen.chap01.part01_ObjectVsObjectArray.model.vo;
 
 public class Book {
 	private String title;
