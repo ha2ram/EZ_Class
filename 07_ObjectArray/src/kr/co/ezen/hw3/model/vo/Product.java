@@ -1,5 +1,7 @@
 package kr.co.ezen.hw3.model.vo;
 
+import kr.co.ezen.hw3.controller.ProductController;
+
 public class Product {
 	private int pId;
 	private String pName;
@@ -15,8 +17,8 @@ public class Product {
 		this.pName = pName;
 		this.price = price;
 		this.tax = tax;
-		
-		// ???
+
+		ProductController.count++;
 	}
 
 	public int getpId() {

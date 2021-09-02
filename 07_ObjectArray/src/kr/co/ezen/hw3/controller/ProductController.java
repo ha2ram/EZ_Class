@@ -22,7 +22,7 @@ public class ProductController {
 			System.out.println("1. 제품 정보 추가");
 			System.out.println("2. 제품 전체 조회");
 			System.out.println("9. 프로그램 종료");
-			System.out.println("메뉴 선택: ");
+			System.out.print("메뉴 선택: ");
 			menu = sc.nextInt();
 
 			switch (menu) {
@@ -46,11 +46,11 @@ public class ProductController {
 		System.out.print("제품 번호: ");
 		int pId = sc.nextInt();
 		sc.nextLine();
-		System.out.println("제품 이름: ");
+		System.out.print("제품 이름: ");
 		String pName = sc.nextLine();
-		System.out.println("제품 가격: ");
+		System.out.print("제품 가격: ");
 		int price = sc.nextInt();
-		System.out.println("제품 세금: ");
+		System.out.print("제품 세금: ");
 		double tax = sc.nextDouble();
 
 		pro[count] = new Product(pId, pName, price, tax);
