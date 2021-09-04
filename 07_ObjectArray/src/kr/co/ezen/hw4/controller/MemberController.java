@@ -83,4 +83,103 @@ public class MemberController {
 		}
 		memberCount--;
 	}
+
+	public Member[] sortIdAsc() {
+		Member copy[] = new Member[memberCount];
+		System.arraycopy(mem, 0, copy, 0, memberCount);
+
+		for (int i = 0; i < copy.length; i++) {
+			for (int j = 0; j < i; j++) {
+				if (copy[i].getUserId().compareTo(copy[j].getUserId()) < 0) {
+					Member temp = copy[j];
+					copy[j] = copy[i];
+					copy[i] = temp;
+
+				}
+			}
+		}
+		return copy;
+	}
+
+	// A,B A == B --> 0 A > B --> -1 A < B --> 1
+	public Member[] sortIdDesc() {
+		Member copy[] = new Member[memberCount];
+		System.arraycopy(mem, 0, copy, 0, memberCount);
+
+		for (int i = 0; i < copy.length; i++) {
+			for (int j = 0; j < i; j++) {
+				if (copy[i].getUserId().compareTo(copy[j].getUserId()) < 0) {
+					Member temp = copy[j];
+					copy[j] = copy[i];
+					copy[i] = temp;
+
+				}
+			}
+		}
+		return copy;
+	}
+
+	public Member[] sortAsc() {
+		Member copy[] = new Member[memberCount];
+		System.arraycopy(mem, 0, copy, 0, memberCount);
+
+		for (int i = 0; i < copy.length; i++) {
+			for (int j = 0; j < i; j++) {
+				if (copy[i].getUserId().compareTo(copy[j].getUserId()) > 0) {
+					Member temp = copy[j];
+					copy[j] = copy[i];
+					copy[i] = temp;
+				}
+			}
+		}
+		return copy;
+	}
+
+	public Member[] sortAgeAsc() {
+		Member copy[] = new Member[memberCount];
+		System.arraycopy(mem, 0, copy, 0, memberCount);
+
+		for (int i = 0; i < copy.length; i++) {
+			for (int j = 0; j < i; j++) {
+				if (copy[i].getAge() - copy[j].getAge() < 0) {
+					Member temp = copy[j];
+					copy[j] = copy[i];
+					copy[i] = temp;
+				}
+			}
+		}
+		return copy;
+	}
+
+	public Member[] sortAgeDesc() {
+		Member copy[] = new Member[memberCount];
+		System.arraycopy(mem, 0, copy, 0, memberCount);
+
+		for (int i = 0; i < copy.length; i++) {
+			for (int j = 0; j < i; j++) {
+				if (copy[i].getAge() - copy[j].getAge() > 0) {
+					Member temp = copy[j];
+					copy[j] = copy[i];
+					copy[i] = temp;
+				}
+			}
+		}
+		return copy;
+	}
+
+	public Member[] sortGenderDesc() {
+		Member copy[] = new Member[memberCount];
+		System.arraycopy(mem, 0, copy, 0, memberCount);
+
+		for (int i = 0; i < copy.length; i++) {
+			for (int j = 0; j < i; j++) {
+				if (copy[i].getGender() == 'M' && copy[j].getGender() == 'F') {
+					Member temp = copy[j];
+					copy[j] = copy[i];
+					copy[i] = temp;
+				}
+			}
+		}
+		return copy;
+	}
 }

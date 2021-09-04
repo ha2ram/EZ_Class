@@ -182,7 +182,7 @@ public class MemberMenu {
 			System.out.println("2.아이디 내림차순 정렬");
 			System.out.println("3.나이 오름차순 정렬");
 			System.out.println("4.나이 내림차순 정렬");
-			System.out.println("5.성별 내림차순 정렬(남여 순");
+			System.out.println("5.성별 내림차순 정렬(남여 순)");
 			System.out.println("9.이전 메뉴로");
 
 			System.out.print("메뉴 선택: ");
@@ -193,6 +193,32 @@ public class MemberMenu {
 				System.out.println("이전 메뉴로 돌아갑니다.");
 
 				return;
+			}
+
+			Member[] sortMem = null;
+
+			switch (menu) {
+			case 1:
+				sortMem = mc.sortIdAsc();
+				break;
+			case 2:
+				sortMem = mc.sortIdDesc();
+				break;
+			case 3:
+				sortMem = mc.sortAgeAsc();
+				break;
+			case 4:
+				sortMem = mc.sortAgeDesc();
+				break;
+			case 5:
+				sortMem = mc.sortGenderDesc();
+				break;
+			default:
+				System.out.println("잘못 입력하셨습니다.");
+			}
+			System.out.println("======정렬 결과======");
+			for (int i = 0; i < sortMem.length; i++) {
+				System.out.println(sortMem[i].information());
 			}
 		}
 	}
